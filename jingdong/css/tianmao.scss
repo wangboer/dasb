@@ -1,0 +1,144 @@
+@charset "utf-8";
+$width:100%;
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "楷体";
+}
+html,body,.box{
+    height: $width;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+html,body{
+    height: $width;
+}
+html{
+    font-size:62.5%;
+}
+header{
+    width:$width;
+    height: 10rem;
+    background: #fb0628;
+    #logo{
+        width: $width;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        li:nth-child(1){
+            width: 2.5rem;
+            height: 2.5rem;
+            img{
+                width: $width;
+                height: $width;
+            }
+        }
+        li:nth-child(1){
+            width: 2.5rem;
+            height: 2.5rem;
+            img{
+                width: $width;
+                height: $width;
+            }
+        }
+        li:nth-child(2){
+            width: $width/2;
+            height: 3rem;
+            img{
+                width: $width;
+                height: $width;
+            }
+        }
+       li:nth-child(3){
+            width: 2.5rem;
+            height: 2.5rem;
+            img{
+                width: $width;
+                height: $width;
+            }
+        }
+    }
+    input{
+        width: 88%;
+        height: 3rem;
+        margin-left: 6%;
+        border: 0px;
+        text-align: center;
+    }
+    
+}
+nav{
+    width: 100%;
+    height: 8rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li{
+        width: 5rem;
+        height: 5rem;
+        img{
+            width: $width;
+            height: $width;
+        }
+        p{
+            text-align: center;
+            color: #363636;
+        }
+    }
+}
+.swiper-container{
+    width: 95%;
+}
+.swiper-slide{
+    width: $width;
+    height: 20rem;
+    img{
+        width: $width;
+        height: $width;
+    }
+}
+#banner{
+    margin-top: 1%;
+    width: $width;
+    height: 13rem;
+    img{
+        width: $width;
+        height: $width;
+    }
+}
+#ti{
+    width: 88%;
+    height: 6rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li:nth-child(1){
+        width: 4rem;
+        height: 4rem;
+        img{
+            width: $width;
+            height: $width;
+        }
+    }
+    li:nth-child(2){
+        width: 80%;
+        height: 40px;
+        border-left:1px solid #ccc ;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        p{
+            font-size: 1.2rem;
+            color: #515151;
+            padding-left: 10px;
+        }
+    }
+}
+

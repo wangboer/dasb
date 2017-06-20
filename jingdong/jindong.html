@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<script type="text/javascript" src="js/swiper.min.js" ></script>
+		
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				box-sizing: border-box;
+			}
+			a{
+				text-decoration: none;
+				color: #999;
+			}
+			#header{
+				width: 1200px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			#logo{
+				float: left;
+				margin-top: 10px;
+			}
+			#input{
+				width: 50%;
+				height: 100px;
+				float: left;
+				
+			}
+			#input div input{
+				margin-left: 10px;
+				margin-top:20px ;
+				width:70%;
+				height: 35px;
+				border: 3px solid #e4393c;
+			}
+			#input div button{
+				width: 80px;
+				height: 35px;
+				border: 0px;
+				background: #e4393c;
+				color: #fff;
+				cursor: pointer;
+				outline: none;
+			}
+			#input ul{
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+			#input ul li{
+				width: 11%;
+				float: left;
+				font-size: 10px ;
+			}
+			#niu{
+				width:20%;
+				height: 100px;
+				
+				float: left;
+			}
+			#niu #d1{
+				width: 100px;
+				height: 30px;
+				border: 1px solid #efefef;
+				margin-top: 22px;
+				font-size: 10px;
+				color: #999;
+				background: #fafafa;
+				margin-left: -30px;
+				float: left;
+			}
+			#niu #d1 li{
+				margin-top: 5px;
+				margin-left: 3px;
+				float: left;
+			}
+			#niu #d1 figcaption{
+				margin-top: 8px;
+				padding: 0px 5px 0px 5px;
+				float: left;
+			}
+			#niu #d1 span{
+				width: 0px;
+				height: 0px;
+				border-width: 5px;
+				border-color: transparent;
+				border-top-color: #999;
+				border-style: solid;
+				margin-top: 10px;
+				float: left;
+			}
+			#niu #d2{
+				width: 120px;
+				height: 30px;
+				border: 1px solid #efefef;
+				margin-top: 22px;
+				font-size: 10px;
+				color: #999;
+				background: #fafafa;
+				margin-left: 10px;
+				float: left;
+			}
+			#niu #d2 li{
+				margin-top: 5px;
+				margin-left: 3px;
+				float: left;
+			}
+			#niu #d2 figcaption{
+				margin-top: 8px;
+				padding: 0px 5px 0px 5px;
+				float: left;
+			}
+			#niu #d2 span{
+				width: 0px;
+				height: 0px;
+				border-width: 5px;
+				border-color: transparent;
+				border-top-color: #999;
+				border-style: solid;
+				margin-top: 10px;
+				float: left;
+			}
+			#contentbox{
+				width: 1200px;
+				margin: 0 auto;
+				height: 380px;
+			}
+			#zuo{
+				width:216px;
+				height: 380px;
+				border: 1px solid #e4393c;
+				float: left;
+			}
+			#zuo p{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				background: #e4393c;
+				color: #fff;
+				font-size: 12px;
+				padding-left: 10px;
+			}
+			#zuo ul li{
+				width: 100%;
+				color: #666;
+				font-size: 12px;
+				line-height: 25px;
+				padding-left: 15px;
+			}
+			#zhong{
+				width:624px;
+				height:380px;
+				
+				float: left;
+			}
+			#zhong ul{
+				width: 100%;
+				height: 30px;
+				background: #ff0000;
+				color: #fff;
+				font-size: 14px;
+			}
+			#zhong ul li{
+				float: left;
+				line-height: 30px;
+				width: 12%;
+				text-align: center;
+			}
+			#zhong #banner{
+				width: 95%;
+				height: 200px;
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+			#banner img{
+				width: 100%;
+				height: 100%;
+			}
+			#zhong #tu{
+				width: 95%;
+				height: 140px;
+				
+				margin: 0 auto;
+			}
+			#zhong #tu li{
+				width: 33.3333%;
+				height: 100%;
+				border: 1px solid #ccc;
+				float: left;
+				position: relative;
+			}
+			#zhong #tu li img{
+				width: 100%;
+				height: 100%;
+			}
+			#you{
+				width: 360px;
+				height: 380px;
+				float: left;
+			}
+			#you #pp{
+				width: 100%;
+				height: 30px;
+				background: #ff0000;
+			}
+			#you #t1{
+				width: 100%;
+				margin-top: 10px;
+			}
+			#you #t1 img{
+				width: 100%;
+			}
+			#kb{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				
+			}
+			#kb figcaption{
+				float: right;
+				color: dodgerblue;
+				font-size: 14px;
+			}
+			#kb span{
+				float: left;
+				font-size: 18px;
+				color: #666666;
+				font-weight: bold;
+			}
+			#you #wen{
+				width: 100%;
+				height: 91px;
+				border: 1px solid #ccc;
+			}
+			#you #wen ul{
+				width: 50%;
+				height: 95%;
+				float: left;
+				margin-top: 3px;
+				border-right: 1px solid #ccc;
+			}
+			#you #wen ul li{
+				width: 100%;
+				
+				line-height: 20px;
+				padding-left: 5px;
+				color: #666;
+				font-size: 12px;
+			}
+			#bb{
+				width: 100%;
+				height: 130px;
+				
+				margin-top: 5px;
+			}
+			#bb ul{
+				width: 100%;
+				height:100%;
+			}
+			#bb ul li{
+				width: 25%;
+				height: 50%;
+				text-align: center;
+				float: left;
+				border: 1px solid #ccc;
+			}
+			#bb ul li img{
+				margin-top: 5px;
+			}
+			#bb ul li p{
+				text-align: center;
+				color: #999;
+				font-size: 12px;
+			}
+			#wei{
+				width: 1200px;
+				height: 200px;
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+			#wei #left{
+				width: 825px;
+				height: 200px;
+				border: 1px solid #ccc;
+				border-top: 3px solid #ccc;
+				float: left;
+			}
+			#wei #left ul{
+				width: 50%;
+				height: 100%;
+				float: left;
+				border-right: 1px solid #ccc;
+				
+			}
+			#wei #left ul span{
+				display: block;
+				width: 100px;
+				height:30px;
+				line-height: 30px;
+				
+				margin-left: 5px;
+			}
+			#wei #left ul li{
+				width: 100%;
+				height:70px;
+				
+			}
+			#wei #tt1{
+				width: 60px;
+				height: 60px;
+				float: left;
+				margin-left: 5px;
+				margin-right: 5px;
+				
+			}
+			#wei #tt2{
+				width: 300px;
+				height: 60px;
+				color: #999;
+				font-size: 10px;	
+				float: left;
+				
+			}
+			#wei #tt2 p{
+				line-height: 20px;
+			}
+			#wei #tt2 p:nth-child(1){
+				color:blue;
+			}
+			
+			#wei #tt3{
+				
+				float: left;
+				font-size: 30px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 80px;
+				color: #ccc;
+			}
+			#wei #tt1 img{
+				width: 100%;
+				height: 100%;
+			}
+			#wei #right{
+				width: 360px;
+				height: 140px;
+				float: right;
+				border: 1px solid #ccc;
+				border-top: 3px solid #ccc;
+			}
+			#yao{
+				width:100%;
+				height:110px;
+				
+			}
+			#yao span{
+				height: 100px;
+				display: block;
+				float: left;
+				margin-left: 10px;
+			}
+			#yao ol{
+				height: 100px;
+				float: left;
+				color:dodgerblue;
+				font-size: 12px;
+				margin-left: 20px;
+			}
+			#yao ol li{
+				line-height: 25px;
+			}
+			#wei #wwen{
+				width: 100%;
+				height: 30px;
+				font-weight: bold;
+				margin-left: 10px;
+			}
+			#in{
+				width: 100%;
+			}
+			#in input{
+				width: 210px;
+				height: 25px;
+				margin-left: 10px;
+			}
+			#in button{
+				width: 60px;
+				height: 25px;
+				border: none;
+				outline: none;
+				border-radius: 3px;
+				color: #fff;
+				background: red;
+				margin-left: 10px;
+			}
+			#box{
+				width: 1200px;
+				height: 450px;
+				margin: 0 auto;
+				
+			}
+			#box #zi{
+				width:100%;
+				height: 50px;
+				line-height: 50px;
+				color:#666;
+				
+			}
+			#box #zi span:nth-child(1){
+				font-size: 25px;
+				font-weight: bold;
+			}
+			#box #zi span:nth-child(2){
+				font-family: 楷体;
+				font-weight: bold;
+				
+			}
+			#nav1{
+				width: 100%;
+				display: flex;
+				flex-flow: wrap row; 
+			}
+			#nav1 li{
+				width: 25%;
+				height: 190px;
+				
+				position: relative;
+				overflow: hidden;
+			}
+			#nav1 li img{
+				width: 100%;
+				height: 100%;
+			}
+			#nav1 li img:hover{
+				transform: translateX(-15px);
+				transition: 0.5s;
+			}
+			#nav1 li a{
+				display: block;
+				width: 120px;
+				height: 100%;
+				padding: 30px 10px 0px 10px;
+				
+				background: rgba(255,255,255,0.5);
+				position: absolute;
+				left: 0;
+				top:0;
+			}
+			#nav1 li a p{
+				font-size: 12px;
+				line-height: 20px;
+			}
+			#nav1 li a span{
+				font-size: 12px;
+				background: #ea6365;
+				color: #fff;
+				padding: 2px;
+				padding-right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div id="logo">
+				<img src="img/logo.png" />
+			</div>
+			<div id="input">
+				<div><input type="text" /><button>搜索</button></div>
+				<ul>
+					<li><a href="#">热门搜索：</a></li>
+					<li><a href="#">查干湖鱼</a></li>
+					<li><a href="#">糖猫</a></li>
+					<li><a href="#">家电满减</a></li>
+					<li><a href="#">车品满减</a></li>
+					<li><a href="#">新年盛典</a></li>
+					<li><a href="#">魅蓝note</a></li>
+					<li><a href="#">礼品书</a></li>
+					<li><a href="#">打我啊</a></li>
+				</ul>
+				
+			</div>
+			<div id="niu">
+				<div id="d1">
+					<li><img src="img/my.png"></li>
+					<figcaption>我的京东</figcaption>
+					<span></span>
+				</div>
+				<div id="d2">
+					<li><img src="img/gwc.png"></li>
+					<figcaption>去购物车结算</figcaption>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<div id="contentbox">
+			<div id="zuo">
+				<p>全部商品分类</p>
+				<ul>
+					<li>图书、音像、数字商品</li>
+					<li>家用电器</li>
+					<li>手机、数码、京东通信</li>
+					<li>电脑、办公</li>
+					<li>家居、家具、家装、厨具</li>
+					<li>男装、女装、内衣、珠宝</li>
+					<li>个护化妆</li>
+					<li>鞋靴、箱包、钟表、奢侈品</li>
+					<li>运动户外</li>
+					<li>整车、汽车用品</li>
+					<li>母婴、玩具乐器</li>
+					<li>食品饮料、酒类、生鲜</li>
+					<li>营养保健</li>
+					<li>彩票、旅行、充值、票务</li>
+				</ul>
+			</div>
+			<div id="zhong">
+				<ul>
+					<li style="background: #a40000;">首页</li>
+					<li>服装城</li>
+					<li>食品</li>
+					<li>团购</li>
+					<li>夺宝岛</li>
+					<li>闪购</li>
+					<li>金融</li>
+				</ul>
+				
+				<div id="banner">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="jing/images/1.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="jing/images/2.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="jing/images/3.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="jing/images/4.jpg">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-scrollbar"></div>
+	</div>
+				</div>
+				<div id="tu">
+					<li>
+						<img src="img/54a11880N67a44242.jpg" />
+					</li>
+					<li style="border-left: none; border-right: none;">
+						<img src="img/549bae66N21439c07.jpg" />
+					</li>
+					<li>
+						<img src="img/549d17f1Nc848bbab.jpg" />
+					</li>
+				</div>
+			</div>
+			<div id="you">
+				<p id="pp"></p>
+				<div id="t1">
+					<img src="img/worth.png" />
+				</div>
+				
+				<div id="kb">
+					<figcaption>更多快报></figcaption>
+					<span>京东快报</span>
+				</div>
+				
+				<div id="wen">
+					<ul>
+						<li>家电盛典 满千减百</li>
+						<li>签证0服务福 首尔1588元</li>
+						<li>少儿好书满200立减100</li>
+						<li>圣诞礼物:赠送5888元</li>
+					</ul>
+					<ul style="border-right: none;">
+						<li>团聚会 送钻石</li>
+						<li>年会专场满减直降一站购</li>
+						<li>帮宝适 满300减40</li>
+						<li>全民盛宴 购物送B值</li>
+					</ul>
+				</div>
+				
+				<div id="bb">
+					<ul>
+						<li>
+							<img src="img/huafei.png">
+							<p>话费</p>
+						</li>
+						<li style="border-left: none;">
+							<img src="img/jipiao.png">
+							<p>机票</p>
+						</li>
+						<li style="border-left: none;">
+							<img src="img/cai.png">
+							<p>彩票</p>
+						</li>
+						<li style="border-left: none;">
+							<img src="img/game.png">
+							<p>游戏</p>
+						</li>
+						<li style="border-top: none;">
+							<img src="img/travel.png">
+							<p>旅行</p>
+						</li>
+						<li style="border-top: none; border-left: none;">
+							<img src="img/movie.png">
+							<p>电影票</p>
+						</li>
+						<li style="border-top: none; border-left: none;">
+							<img src="img/licai.png">
+							<p>理财</p>
+						</li>
+						<li style="border-top: none; border-left: none;">
+							<img src="img/shuidian.png">
+							<p>水煤电</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+			<div id="wei">
+				<div id="left">
+					<ul>
+						<span>热门晒单</span>
+						<li>
+							<div id="tt1">
+								<img src="img/hot-1.jpg" />
+							</div>
+							<div id="tt2">
+								<p>晒单贴单买进口 kjeldsens蓝曲奇礼盒</p>
+								<p>刚拿到同事就开吃了，打开盖就闻到浓浓的奶</p>
+								<p>很好吃。看评论以为，但是完全没有，曲奇会有碎</p>
+							</div>
+							<div id="tt3">
+								”
+							</div>
+							
+						</li>
+						<li>
+							
+							<div id="tt1">
+								<img src="img/hot-3.jpg" />
+							</div>
+							<div id="tt2">
+								<p>晒单贴单买进口 kjeldsens蓝曲奇礼盒</p>
+								<p>刚拿到同事就开吃了，打开盖就闻到浓浓的奶</p>
+								<p>很好吃。看评论以为，但是完全没有，曲奇会有碎</p>
+							</div>
+							<div id="tt3">
+								”
+							</div>
+							
+						</li>
+					</ul>
+					<ul style="border-right: none;">
+						<span>热门活动</span>
+						<li>
+							<div id="tt1">
+								<img src="img/hot-2.jpg" />
+							</div>
+							<div id="tt2">
+								<p>晒单贴单买进口 kjeldsens蓝曲奇礼盒</p>
+								<p>刚拿到同事就开吃了，打开盖就闻到浓浓的奶</p>
+								<p>很好吃。看评论以为，但是完全没有，曲奇会有碎</p>
+							</div>
+							<div id="tt3">
+								”
+							</div>
+							
+						</li>
+						<li>
+							
+							<div id="tt1">
+								<img src="img/hot-4.jpg" />
+							</div>
+							<div id="tt2">
+								<p>晒单贴单买进口 kjeldsens蓝曲奇礼盒</p>
+								<p>刚拿到同事就开吃了，打开盖就闻到浓浓的奶香</p>
+								<p>很好吃。看评论以为，但是完全没有，曲奇会有碎</p>
+							</div>
+							<div id="tt3">
+								”
+							</div>
+							
+						</li>
+					</ul>
+				</div>
+				<div id="right">
+					<div id="kb">
+					<figcaption>更多在线读书></figcaption>
+					<span style="margin-left: 10px;">在线读书</span>
+					</div>
+					
+					<div id="yao">
+						<span><img src="img/hot-5.jpg"></span>
+						<ol>
+							<li>·电子书圣诞狂欢，免费赢手机</li>
+							<li>·《袁腾飞讲先秦》(套装全两册)</li>
+							<li>·《只为成功找方法》升职宝典</li>
+							<li>·电子书圣诞狂欢，免费赢手机</li>
+						</ol>
+					</div>
+					<div id="wwen">
+						订阅促销信息
+					</div>
+					
+					<div id="in">
+						<input type="text" placeholder="请输入您的Email地址"/><button>订阅</button>
+					</div>`
+				</div>
+				
+			</div>
+			
+			<div id="box">
+				<div id="zi">
+					<span>生活的橱窗</span>
+					<span>每一天展示精彩！</span>
+				</div>
+				
+				<div id="nav1">
+					<li>
+						<img src="jing/images/54a0c2f0N100f64ba.jpg">
+						<a href="#">
+							<h3>京东预售</h3>
+							<p>新年礼盒预售</p>
+							<span>智能大使亲荐</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a0cd73N8dbb1d57.jpg">
+						<a href="#">
+							<h3>金融精选</h3>
+							<p>天天免息</p>
+							<span style="background: none; color: #ea6365;">名表轻松拥有</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a253a5Ne5dbe760.jpg">
+						<a href="#">
+							<h3>京东预售</h3>
+							<p>新年礼盒预售</p>
+							<span style="background: none; color: #999;">预约送Q币</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a12c7bN93cc42b8.jpg">
+						<a href="#">
+							<h3>天天特价</h3>
+							<p>佳能单反相机</p>
+							<span>直降600元</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a13d0aNb3a0de59.jpg">
+						<a href="#">
+							<h3 style="color: #000;">品牌街</h3>
+							<p style="color: #666;">锤子手机</p>
+							<span style="background: none; color: #ea6365;">火爆开售</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a213e6N36952564.png">
+						<a href="#">
+							<h3>京东首发</h3>
+							<p>多芬唯蜜定制</p>
+							<span>至臻礼盒专享</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a13786N96fa5d29.jpg">
+						<a href="#">
+							<h3>优惠券</h3>
+							<p>星期六狂欢购</p>
+							<span style="background: none; color: #ea6365;">全场0.8折起</span>
+						</a>
+					</li>
+					<li>
+						<img src="jing/images/54a09467N8f337bea.jpg">
+						<a href="#">
+							<h3 style="color: #000;">好东西</h3>
+							<p style="color: #666;">黑巧精选礼盒</p>
+							<span style="background: none; color: #ea6365;">独家美食买1赠1</span>
+						</a>
+					</li>
+				</div>
+				
+			</div>
+	</body>
+	<script>
+			
+			var myswiper= new Swiper(".swiper-container",{
+				speed:1000,
+				autoplay:1000,
+				loop:true,
+				slidesperView:1,
+				pagination:".swiper-pagination",
+				nextButton:".swiper-button-next",
+				prevButton:".swiper-button-prev",
+				scrollbar:".swiper-scrollbar",
+				autoplayDisableOnInteraction:false,
+				direction:"horizontal",
+				loopAdditionalSlides:2
+			})
+
+			
+		</script>
+</html>
